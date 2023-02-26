@@ -2,17 +2,18 @@ import pandas as pd
 
 #usando la funcion read_csv para leer el archivo csv
 #df = data frames.. filas||columnas
-df = pd.read_csv("archivos\\datos.csv",names=["name","lastname","age"])
+#df = pd.read_csv("archivos\\datos.csv",names=["name","lastname","age"])
+df = pd.read_csv("archivos\\datos.csv")
 df2 = pd.read_csv("archivos\\datos.csv",names=["name","lastname","age"])
 
 #obteniendo los datos de la columna nombre
-nombres = df["name"]
+nombres = df["nombre"]
 
 #ordenando el dataframe por la edad
-df_ordenado = df.sort_values("age")
+df_ordenado = df.sort_values("edad")
 
 #ordenandolo de forma descendente
-df_ordenandolo_descendente = df.sort_values("age",ascending=False)
+df_ordenandolo_descendente = df.sort_values("edad",ascending=False)
 
 #concatenando los dos data frame
 df_concatenado = pd.concat([df,df2])
@@ -40,13 +41,17 @@ filas_totales,columnas_totales = df.shape
 #obteniendo data estadistica del dataframe
 df_info = df.describe()
 
+#accediendo a la edad de la fila 2
+elemento_especifico_loc = df.loc[2,"edad"]
+
+#accediendo a la edad de la fila 2, columna 2
+elemento_especifico_iloc = df.iloc[2,2]
 
 
 
 
 
-
-print(df_info)
+print(elemento_especifico_iloc)
 
 
 
