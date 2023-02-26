@@ -47,11 +47,27 @@ elemento_especifico_loc = df.loc[2,"edad"]
 #accediendo a la edad de la fila 2, columna 2
 elemento_especifico_iloc = df.iloc[2,2]
 
+#accediendo a todos los apellidos con loc
+apellidos_loc = df.loc[:,"apellido"]
+
+#accediendo a todas las filas de una columna
+#con slicing el primer parametro como no tiene nada significa que son todos
+#el segundo parametro es 1 solo elemento especifico que tu quieras
+'''.iloc[FILAS,COLUMNAS]'''
+apellidos = df.iloc[:,1]
+
+#accediendo a la fila 3 con loc
+#accedo a la 2da fila y a todas las columnas
+fila_3 = df.loc[2,:]
+
+#accediendo a la fila 3 con iloc
+fila3 = df.iloc[2,:]
+
+#accediendo a las filas con edad mayor que 30
+mayor_que_30 = df.loc[df["edad"]>30,:]
 
 
-
-
-print(elemento_especifico_iloc)
+print(mayor_que_30)
 
 
 
