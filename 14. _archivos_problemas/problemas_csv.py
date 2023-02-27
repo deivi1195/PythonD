@@ -1,6 +1,6 @@
 #cambiar el tipo de dato de una columna
 import pandas as pd
-df = pd.read_csv("14. Archivos_problemas_resueltos\\datos.csv")
+df = pd.read_csv("14._archivos_problemas\\datos.csv")
 
 #convertir a string los datos de una columna
 df['edad'] = df['edad'].astype(str)
@@ -25,7 +25,7 @@ df = df.dropna(axis=1)
 df = df.drop_duplicates()
 
 #creando un CSV con el dataframe resultante (limpio)
-df.to_csv("14. Archivos_problemas_resueltos\\datos_limpios.csv")
+df.to_csv("14._archivos_problemas\\datos_limpios.csv")
 
 
 
