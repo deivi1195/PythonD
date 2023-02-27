@@ -14,15 +14,18 @@ df['apellido'].replace("dalto","maestro",inplace=True)
 #mostrando la columna apellido
 #print(df['apellido'])
 
-print(df)
+#eliminando filas con datos faltantes
 df = df.dropna()
-print(df)
 
+#eliminando columnas con datos faltantes
+#el parametro de axis=0 son las columnas y axis=1 son las filas
+df = df.dropna(axis=1)
 
+#eliminando las filas repeditas
+df = df.drop_duplicates()
 
-
-
-
+#creando un CSV con el dataframe resultante (limpio)
+df.to_csv("14. Archivos_problemas_resueltos\\datos_limpios.csv")
 
 
 
