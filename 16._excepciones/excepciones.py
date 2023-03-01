@@ -9,8 +9,10 @@ def sumar_dos():
         try:
             resultado = int(a) + int(b)
         #si lanzo una excepcion, pedirle que reingrese los datos
-        except:
+        except Exception as e:
             print("no escribiste un numero, vuelve a intentar escribir un numero")
+            #aqui mostramos exactamente el nombre del error
+            print(f'ERROR: {e}')        
         #si todo salio bien terminamos el bucle
         else:
             break
