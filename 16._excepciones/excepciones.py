@@ -16,8 +16,9 @@ def sumar_dos():
         #si todo salio bien terminamos el bucle
         else:
             break
+        #finally se ejecuta siempre
         finally:
-            print("manejo de excepcion finalizado")
+            print("Esto se ejecuta siempre")
             
     #mostrando el resultado        
     return resultado
