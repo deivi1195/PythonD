@@ -14,7 +14,6 @@ email = "deivigonzaleznuevogmail@gmail.com"
 # [a-zA-Z0-9.-]+ lo mismo de arriba solamente que saco el porcentaje %
 # buscando un punto (\.)
 # buscando valores de la a-zA-Z (mayus y minus) al menos dos veces {2,} {dos letras, ilimitadas letras}
-# {2,} 
 pattern = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
 
 #re.match(encontrar el patron, en la variable "email")
