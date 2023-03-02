@@ -6,6 +6,7 @@ numeros = list(range(1,7))
 
 numeros = random.choice(numeros)
 
+#mostrando un numero aleatorio
 print(numeros)
 
 
