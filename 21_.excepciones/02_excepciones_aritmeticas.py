@@ -18,10 +18,14 @@ while True:
         break
     except:
         print("MENSAJE: debe escribir un valor valido. Intente nuevamente.\n")    
-        
-division = dividendo / divisor
 
-print(f'El resultado de la division es: {division}')
+try:
+    division = dividendo / divisor
+
+    print(f'El resultado de la division es: {division}')
+except ZeroDivisionError as e:
+    print(f'ERROR: {e}')
+    print('MENSAJE: Intento de division entre cero.')
 
 
 
